@@ -1,0 +1,20 @@
+{
+    "name": "bazel_test",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazel": "latest",
+        "@bazel/ibazel": "latest",
+        "@bazel/buildifier": "latest"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "test": "bazel test //...",
+        "babel": "babel app.js --config-file ./es5.babelrc --out-file ./dist/app.es5.js"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3"
+    }
+}
